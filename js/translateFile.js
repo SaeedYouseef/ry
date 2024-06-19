@@ -2,9 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelect = document.getElementById('langSelect');
     const defaultLang = 'en';
 
+    // Get saved language from localStorage or use default language
     const savedLang = localStorage.getItem('selectedLang');
     const selectedLang = savedLang || defaultLang;
     langSelect.value = selectedLang;
+
+    // Set direction based on selected language
+    if (selectedLang === 'en') {
+        document.getElementById('links-nav').style.direction = 'ltr';
+    } else {
+        document.getElementById('links-nav').style.direction = 'rtl';
+    }
 
     translatePage(selectedLang);
 
@@ -12,6 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const newLang = langSelect.value;
         translatePage(newLang);
         localStorage.setItem('selectedLang', newLang);
+
+        // Update direction on language change
+        if (newLang === 'en') {
+            document.getElementById('links-nav').style.direction = 'ltr';
+        } else {
+            document.getElementById('links-nav').style.direction = 'rtl';
+        }
     });
 });
 
