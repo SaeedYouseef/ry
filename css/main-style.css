@@ -2,6 +2,10 @@
     --main-color: #3b5882;
 }
 
+* {
+    font-family: "Cairo", sans-serif;
+}
+
 nav {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(82, 37, 55, 0.373) 0px 0px 1px 0px;
 }
@@ -14,3 +18,34 @@ nav {
     color: var(--main-color);
 }
 
+#home {
+    height: calc(100vh - 90px);
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #3A5785;
+    transform: skewY(-6deg);
+    -webkit-transform: skewY(-6deg);
+    -moz-transform: skewY(-6deg);
+    -ms-transform: skewY(-6deg);
+    -o-transform: skewY(-6deg);
+    transform-origin: top left;
+}
+
+.home-image {
+    overflow: hidden;
+    background: linear-gradient(#ffffff,#ffffff,#ffffff);
+    border-radius: 50% 50% 50% 50% / 50% 50% 0% 0%;
+    -webkit-border-radius: 50% 50% 50% 50% / 50% 50% 0% 0%;
+    -moz-border-radius: 50% 50% 50% 50% / 50% 50% 0% 0%;
+    -ms-border-radius: 50% 50% 50% 50% / 50% 50% 0% 0%;
+    -o-border-radius: 50% 50% 50% 50% / 50% 50% 0% 0%;
+}
