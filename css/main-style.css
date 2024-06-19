@@ -135,3 +135,32 @@ nav {
 .overlay p {
     margin-bottom: 10px;
 }
+
+footer {
+    background-color: var(--main-color);
+}
+
+footer a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+footer a:hover {
+    background-color: #ffffff14;
+}
