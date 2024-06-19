@@ -1,7 +1,16 @@
+:root {
+    --main-color: #3b5882;
+}
+
 nav {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(82, 37, 55, 0.373) 0px 0px 1px 0px;
 }
 
 .logo {
-    width: 200px;
+    width: 170px;
 }
+
+.nav-item .nav-link {
+    color: var(--main-color);
+}
+

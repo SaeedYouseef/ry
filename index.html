@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,39 +10,48 @@
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="css/main-style.css">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg  py-2 ">
+    <nav class="navbar navbar-expand-lg py-2">
         <div class="container">
             <a class="navbar-brand p-0 m-0" href="#">
-                <img src="Assets/images/logo2.jpeg" class="logo">
+                <img src="Assets/images/logo.jpeg" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse ps-3 ps-xl-0" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0 mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="#" data-translate="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blogs</a>
+                        <a class="nav-link" href="#" data-translate="blogs">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="#" data-translate="products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#" data-translate="about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="#" data-translate="contact">Contact Us</a>
                     </li>
                 </ul>
-                <a href="#" class="btn btn-outline-primary">Login</a>
+                <div class="d-flex">
+                    <select class="form-select" id="langSelect">
+                        <option value="en" data-translate="en">EN</option>
+                        <option value="ar" data-translate="ar">AR</option>
+                    </select>
+                    <a href="#" class="btn btn-outline-primary ms-2 " data-translate="login" style="min-width:fit-content;">Login</a>                </div>
             </div>
         </div>
     </nav>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main-script.js"></script>
+    <script src="js/translateFile.js"></script>
 </body>
+
 </html>
