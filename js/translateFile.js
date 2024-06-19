@@ -1,18 +1,22 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const langSelect = document.getElementById('langSelect');
     const defaultLang = 'en';
 
-    translatePage(defaultLang);
+    const savedLang = localStorage.getItem('selectedLang');
+    const selectedLang = savedLang || defaultLang;
+    langSelect.value = selectedLang;
+
+    translatePage(selectedLang);
 
     langSelect.addEventListener('change', () => {
-        const selectedLang = langSelect.value;
-        translatePage(selectedLang);
+        const newLang = langSelect.value;
+        translatePage(newLang);
+        localStorage.setItem('selectedLang', newLang);
     });
 });
 
 async function loadTranslations(lang) {
-    const response = await fetch(`../json/${lang}.json`);
+    const response = await fetch(`./json/${lang}.json`);
     return await response.json();
 }
 
