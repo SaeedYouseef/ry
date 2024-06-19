@@ -10,8 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set direction based on selected language
     if (selectedLang === 'en') {
         document.getElementById('links-nav').style.direction = 'ltr';
+        document.getElementById('about-text').style.direction = 'ltr';
+
     } else {
         document.getElementById('links-nav').style.direction = 'rtl';
+        document.getElementById('about-text').style.direction = 'rtl';
+
     }
 
     translatePage(selectedLang);
@@ -24,8 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update direction on language change
         if (newLang === 'en') {
             document.getElementById('links-nav').style.direction = 'ltr';
+            document.getElementById('about-text').style.direction = 'ltr';
         } else {
             document.getElementById('links-nav').style.direction = 'rtl';
+            document.getElementById('about-text').style.direction = 'rtl';
         }
     });
 });
