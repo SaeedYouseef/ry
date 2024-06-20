@@ -136,6 +136,10 @@ nav {
     margin-bottom: 10px;
 }
 
+.contact-section-icon {
+    font-size: 40px;
+}
+
 footer {
     background-color: var(--main-color);
 }

@@ -9,13 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set direction based on selected language
     if (selectedLang === 'en') {
-        document.getElementById('links-nav').style.direction = 'ltr';
-        document.getElementById('about-text').style.direction = 'ltr';
-
+        setDirection('ltr');
     } else {
-        document.getElementById('links-nav').style.direction = 'rtl';
-        document.getElementById('about-text').style.direction = 'rtl';
-
+        setDirection('rtl');
     }
 
     translatePage(selectedLang);
@@ -27,14 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update direction on language change
         if (newLang === 'en') {
-            document.getElementById('links-nav').style.direction = 'ltr';
-            document.getElementById('about-text').style.direction = 'ltr';
+            setDirection('ltr');
         } else {
-            document.getElementById('links-nav').style.direction = 'rtl';
-            document.getElementById('about-text').style.direction = 'rtl';
+            setDirection('rtl');
         }
     });
 });
+
+function setDirection(direction) {
+    document.getElementById('links-nav').style.direction = direction;
+    document.getElementById('about-text').style.direction = direction;
+    document.getElementById('contact-form').style.direction = direction;
+    document.getElementById('contact-card').style.direction = direction;
+}
 
 async function loadTranslations(lang) {
     const response = await fetch(`${lang}.json`);
@@ -43,8 +44,14 @@ async function loadTranslations(lang) {
 
 async function translatePage(lang) {
     const translations = await loadTranslations(lang);
+
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         element.textContent = translations[key];
+    });
+
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        element.placeholder = translations[key];
     });
 }
