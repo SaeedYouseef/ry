@@ -35,6 +35,7 @@ function setDirection(direction) {
     document.getElementById('about-text').style.direction = direction;
     document.getElementById('contact-form').style.direction = direction;
     document.getElementById('contact-card').style.direction = direction;
+    document.getElementById('services').style.direction = direction;
 }
 
 async function loadTranslations(lang) {

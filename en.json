@@ -31,5 +31,14 @@
     "enterPhoneNumber": "Enter Phone Number",
     "enterServices": "Enter Services",
     "enterCountry": "Enter Country",
-    "enterYourComments": "Enter your comments"
+    "enterYourComments": "Enter your comments",
+    "footerTitle": "Triangle Of Life",
+    "footerRights": "&copy; 2024 Triangle Of Life. All Rights Reserved.",
+    "medicalAnalysis": "Medical Analysis",
+    "medicalAnalysisText": "We provide comprehensive medical analysis services, leveraging advanced technologies and expert insights to offer precise diagnoses and treatment plans tailored to individual needs.",
+    "medicalConsultation": "Medical Consultation",
+    "medicalConsultationText": "Our medical consultation service connects you with experienced healthcare professionals who offer personalized guidance and support, addressing your concerns and providing expert advice on various health-related matters.",
+    "scientificBlogs": "Scientific Blogs",
+    "scientificBlogsText": "Explore our collection of scientific blogs covering a wide range of topics, from cutting-edge research to informative articles on health and wellness. Stay informed and inspired by the latest advancements in science and medicine.",
+    "learnMore": "Learn More"
 }

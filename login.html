@@ -1,68 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triangle Of Life | Login</title>
-    <link rel="icon" href="Assets/logo.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="css/main-style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <title>سلايدر بيقلب تلقائي للآراء</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* أسلوب للسلايدر */
+        .testimonial-slide {
+            display: none;
+        }
+
+        .active-slide {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg py-2">
-        <div class="container">
-            <a class="navbar-brand p-0 m-0" href="#">
-                <img src="Assets/images/logo.jpeg" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse ps-3 ps-xl-0" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 mx-auto" id="links-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" data-translate="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-translate="blogs">Blogs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-translate="products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-translate="about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-translate="reserches">Researches</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-translate="contact">Contact Us</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <select class="form-select" style="margin-right: 5px;" id="langSelect">
-                        <option value="en" data-translate="en">EN</option>
-                        <option value="ar" data-translate="ar">AR</option>
-                    </select>
-                    <a href="#" class="btn btn-outline-primary   " data-translate="login"
-                        style="min-width:fit-content;">Login</a>
+    <div class="container py-5">
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-slide text-center">
+                        <i class="fas fa-quote-left fa-2x d-block mb-3"></i>
+                        <p class="text-muted">نص الآراء الأول</p>
+                        <h4 class="text-primary">اسم المستخدم الأول</h4>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-slide text-center">
+                        <i class="fas fa-quote-left fa-2x d-block mb-3"></i>
+                        <p class="text-muted">نص الآراء الثاني</p>
+                        <h4 class="text-primary">اسم المستخدم الثاني</h4>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-slide text-center">
+                        <i class="fas fa-quote-left fa-2x d-block mb-3"></i>
+                        <p class="text-muted">نص الآراء الثالث</p>
+                        <h4 class="text-primary">اسم المستخدم الثالث</h4>
+                    </div>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">السابق</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">التالي</span>
+            </a>
         </div>
-    </nav>
-    <div class="login">
-        
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main-script.js"></script>
-    <script src="js/translateFile.js"></script>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        $(document).ready(function () {
+            // يقوم بتغيير السلايدر تلقائياً كل 5 ثواني
+            $('#testimonialCarousel').carousel({
+                interval: 5000
+            });
+        });
+    </script>
 </body>
 
 </html>
