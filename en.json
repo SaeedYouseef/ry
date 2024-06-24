@@ -40,5 +40,8 @@
     "medicalConsultationText": "Our medical consultation service connects you with experienced healthcare professionals who offer personalized guidance and support, addressing your concerns and providing expert advice on various health-related matters.",
     "scientificBlogs": "Scientific Blogs",
     "scientificBlogsText": "Explore our collection of scientific blogs covering a wide range of topics, from cutting-edge research to informative articles on health and wellness. Stay informed and inspired by the latest advancements in science and medicine.",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "MedicalProducts" : "Medical Products",
+    "MedicalProductsText":"Explore our range of medical products,including state-of-the-art devices and supplies designed to improve patient care and enhance healthcare outcomes."
+
 }
